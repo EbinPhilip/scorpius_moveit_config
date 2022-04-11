@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: scorpius_description
+    relative_path: urdf/scorpius_standalone.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/scorpius.srdf
+  CONFIG:
+    author_name: Ebin Philip
+    author_email: stargazer18@gmail.com
+    generated_timestamp: 1644422870
