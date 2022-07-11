@@ -1,6 +1,6 @@
 controller_list:
   - name: scorpius_arm_controller
-    action_ns: follow_joint_trajectory
+    action_ns: "FollowJointTrajectory"
     type: FollowJointTrajectory
     default: True
     joints:
@@ -10,9 +10,11 @@ controller_list:
       - lower_arm_yaw
       - lower_arm_vertical
       - gripper_yaw
-  # - name: sting_gripper_controller
-  #   action_ns: gripper_action
-  #   type: GripperCommand
-  #   default: True
-  #   joints:
-  #     - left_finger_joint
+      - slider_joint
+
+  - name: sting_gripper_action
+    action_ns: ""
+    type: GripperCommand
+    default: True
+    joints:
+      - left_finger_joint
