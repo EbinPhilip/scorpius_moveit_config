@@ -12,6 +12,24 @@ controller_list:
     type: $(arg fake_execution_type)
     joints:
       - left_finger_joint
+  - name: fake_carriage_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - slider_joint
+  - name: fake_scorpius_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - slider_joint
+      - shoulder_lateral
+      - sholder_vertical
+      - elbow
+      - lower_arm_yaw
+      - lower_arm_vertical
+      - gripper_yaw
 initial:  # Define initial robot poses per group
   - group: sting_arm
-    pose: default
+    pose: arm_zero
+  - group: carriage
+    pose: carriage_zero
+  - group: scorpius_arm
+    pose: scorpius_zero
