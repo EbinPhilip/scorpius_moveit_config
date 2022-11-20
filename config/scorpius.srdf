@@ -22,6 +22,7 @@
         <link name="gripper"/>
         <link name="left_finger"/>
         <link name="right_finger"/>
+        <link name="eef"/>
     </group>
     <group name="carriage">
         <joint name="slider_joint"/>
@@ -57,8 +58,17 @@
         <joint name="shoulder_lateral" value="0"/>
         <joint name="slider_joint" value="0"/>
     </group_state>
+    <group_state name="ready" group="scorpius_arm">
+        <joint name="elbow" value="0"/>
+        <joint name="gripper_yaw" value="0"/>
+        <joint name="lower_arm_vertical" value="0"/>
+        <joint name="lower_arm_yaw" value="0"/>
+        <joint name="sholder_vertical" value="0"/>
+        <joint name="shoulder_lateral" value="1.5707"/>
+        <joint name="slider_joint" value="0"/>
+    </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
-    <end_effector name="sting_end_effector" parent_link="gripper_frame" group="sting_gripper"/>
+    <end_effector name="sting_end_effector" parent_link="eef" group="sting_gripper"/>
     <!--PASSIVE JOINT: Purpose: this element is used to mark joints that are not actuated-->
     <passive_joint name="right_finger_joint"/>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
